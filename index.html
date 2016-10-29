@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <title>Angular-testing</title>
+</head>
+<body>
+  <div ng-app="testingApp" ng-controller="testingController">
+    <p><input type="text" ng-model="firstName"></p>
+    <p><input type="text" ng-model="lastName"></p>
+    <p>{{firstName + " " + lastName}}</p>
+  </div>
+  <script>
+  var app = angular.module('testingApp', []);
+  app.controller('testingController', function($scope){
+    $scope.firstName = "Barry";
+    $scope.lastName = "McGuire";
+  })
+  </script>
+</body>
+</html>
