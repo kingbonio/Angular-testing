@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <title>Angular-testing</title>
+</head>
+<body>
+
+<!-- <div ng-controller="index">
+  <input type="text" ng-model="value" />
+  <span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined()}">Example Text</span>
+</div>
+
+<script>
+  angular.module("root", [])
+	.controller("index", ["$scope", function ($scope) {
+		$scope.value = 1;
+		$scope.isBold = function () { return $scope.value % 2 === 0; };
+        $scope.isItalic = function () { return $scope.value % 3 === 0; };
+        $scope.isUnderlined = function () { return $scope.value % 5 === 0; };
+	}]);
+</script>
+ -->
+
+<!--
+<div ng-controller="index">
+  <table>
+	  <thead>
+		  <tr>
+			  <td>Id</td>
+			  <td>Name</td>
+		  </tr>
+	  </thead>
+	  <tbody>
+	  <tr ng-repeat="product in products" ng-class="{oddRow: $odd}">
+	      <td>{{product.id}}</td>
+	      <td>{{product.name}}</td>
+	  </tr>
+	  </tbody>
+  </table>
+</div>
+
+
+<script>
+  angular.module("root", [])
+  	.controller("index", ["$scope", function($scope) {
+  		$scope.products = [
+  			{id: 1, name: "Hockey puck"},
+  			{id: 2, name: "Golf club"},
+  			{id: 3, name: "Baseball bat"},
+  			{id: 4, name: "Lacrosse stick"}
+  		];
+  }]);
+</script>
+ -->
+
+
+
+ <div ng-controller="index">
+ 	<div><input type="checkbox" ng-model="isFirstElementVisible" /> Is first element visible</div>
+ 	<div><input type="checkbox" ng-model="isSecondElementVisible" /> Is second element visible</div>
+ 	<div ng-show="isFirstElementVisible">First Element</div>
+ 	<div ng-if="isSecondElementVisible">Second Element</div>
+     <input type="text" ng-model="message" />
+     {{message}}
+     <div ng-if="true">
+         <input type="text" ng-model="message" />
+         {{message}}
+     </div>
+ </div>
+
+ <script>
+   angular.module("root", [])
+  	.controller("index", ["$scope", function($scope) {
+  		$scope.isFirstElementVisible = true;
+  		$scope.isSecondElementVisible = true;
+          $scope.message = "Hello World";
+  	}]);
+  </script>
+
+
+</body>
+</html>

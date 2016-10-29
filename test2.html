@@ -1,0 +1,18 @@
+<html ng-app="root">
+    <body>
+        <div ng-controller="index">{{message}}</div>
+    </body>
+</html>
+
+
+
+
+angular.module("root", ["services"])
+	.controller("index", ["$scope", "message", function($scope, message) {
+		$scope.message = message;
+	}]);
+
+
+
+angular.module("services", [])
+	.value("message", "Hello world!");

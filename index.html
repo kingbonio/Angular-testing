@@ -10,6 +10,8 @@
     <p><input type="text" ng-model="lastName"></p>
     <p>{{firstName + " " + lastName}}</p>
   </div>
+
+
   <script>
   var app = angular.module('testingApp', []);
   app.controller('testingController', function($scope){
@@ -17,5 +19,7 @@
     $scope.lastName = "McGuire";
   })
   </script>
+
+
 </body>
 </html>

@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <div ng-module="root" ng-controller="index">
+        <p ng-model="hello">{{message}}</p>
+    </div>
+  </body>
+</html>
+
+
+angular.module("root", ["services"])
+    .controller("index", ["$scope", "message", function($scope, message){
+        $scope.hello = "doggies";
+    }]);
+
+
+
+angular.module("services", [])
+  .value({"hello", "PANTS!"})
