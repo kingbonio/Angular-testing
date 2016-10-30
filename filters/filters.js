@@ -5,4 +5,9 @@ angular.module("filters", [])
                 parseFloat(input).toFixed(precision) :
                 "";
         };
+    })
+    .filter("dollars", function () {
+        return function(input) {
+            return input ? "$" + input : "";
+        };
     });

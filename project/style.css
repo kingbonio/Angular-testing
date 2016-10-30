@@ -1,0 +1,28 @@
+body{
+
+}
+.user-form{
+border: solid black 1px;
+background-color: #e5e5e5;
+padding: 15px;
+}
+.list-div{
+  display: inline-block;
+  margin: auto;
+}
+.user-item{
+  text-align: center;
+  margin: 1px;
+  background-color: #e5e5e5;
+  display: inline-block;
+  min-width: 200px;
+  min-height: 75px;
+}
+.user-content{
+  margin: auto;
+}
+.table-name{
+  margin-top:10px;
+}
+.table-age{
+}

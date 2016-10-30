@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="root">
+<head>
+  <title>Form-Validation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <style>
+    .ng-dirty.ng-valid{
+      border: solid green 2px;
+    }
+    .ng-dirty.ng-invalid{
+      border: solid red 2px;
+    }
+  </style>
+</head>
+<body>
+  <form ng-controller="index">
+    <p>Name: <input type="text" ng-model="name" /></p>
+    <p>Email: <input type="email" ng-model="email" /></p>
+  </form>
+  <script src="root.js"></script>
+</body>
+</html>

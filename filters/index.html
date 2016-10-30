@@ -7,7 +7,7 @@
 <body>
   <div ng-controller="index">
     <p>Value: <input type="text" ng-model="value" /></p>
-    <p> {{value | round:2}}</p>
+    <p> {{value | round:2 | dollars}}</p>
   </div>
   <script src="filters.js" ></script>
   <script src="root.js" ></script>

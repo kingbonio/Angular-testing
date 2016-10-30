@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="root">
+<head>
+  <title>Ajax Code</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js"></script>
+</head>
+<body>
+  <div ng-controller="index">
+    <button ng-click="getUser()">Get User</button>
+    Name: <input ng-model="user.name" />
+    Email: <input ng-model="user.email" />
+    <button ng-click="postUser()">Post User</button>
+  </div>
+  <script src="root.js"></script>
+</body>
+</html>
