@@ -18,6 +18,8 @@ angular.module("root", ["services"])
         name: $scope.name,
         age: $scope.age
       });
+      $scope.name = "";
+      $scope.age = "";
     };
  }])
 

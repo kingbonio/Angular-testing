@@ -14,8 +14,8 @@
 
   <container class="col-xs-12 user-form" ng-controller="form">
     <form>
-      <p>Name:<input type="text" ng-model="name" /></p>
-      <p>Age:<input type="text" ng-model="age" /></p>
+      <p>Name:<input type="text" class="name-input" ng-model="name" /></p>
+      <p>Age:<input type="number" class="age-input" min="0" max="116" ng-model="age" /></p>
       <button class="btn-default" ng-click="addUser()" onclick="return false">Add User</button>
     </form>
     <div class="col-md-12">
