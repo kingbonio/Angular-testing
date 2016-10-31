@@ -1,6 +1,6 @@
-angular.module("form", [])
-  .provider("users", function(){
+angular.module("services", [])
+  .provider("users", [function(){
     this.$get = [function () {
       return new Users()
-    }]
-  })
+    }];
+  }]);

@@ -1,10 +1,10 @@
 angular.module("root", ["services"])
-  .config("usersProvider", function(usersProvider) {
-  })
-  .controller("index", ["$scope", function($scope){
-    $scope.users = usersProvider.users;
+
+  .config(["usersProvider", function(usersProvider) {
+    this.users = usersProvider;
   }])
-  .controller("form", ["$scope", function($scope){
+
+  .controller("form", ["$scope", "users", function($scope, users){
     $scope.$watch("name", function (name) {
  			$scope.nameEntry = "Name: " + name;
  		});
@@ -13,4 +13,14 @@ angular.module("root", ["services"])
  			$scope.ageEntry = "Age: " + age;
  		});
     $scope.age =  "";
+    $scope.addUser = function() {
+      users.addUser({
+        name: $scope.name,
+        age: $scope.age
+      });
+    };
+ }])
+
+ .controller("index", ["$scope", "users", function($scope, users){
+   $scope.users = users.userList;
  }]);

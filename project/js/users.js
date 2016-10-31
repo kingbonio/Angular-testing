@@ -1,5 +1,5 @@
 function Users(){
-  this.users = [
+  this.userList = [
     {name: "david", age: 47},
     {name: "craig", age: 13},
     {name: "barrie", age: 52},
@@ -7,9 +7,9 @@ function Users(){
     {name: "agnes", age: 75}
   ];
   this.addUser = function(userData){
-    this.users.push({
-      name: userData.name,
-      age: userData.age
+    this.userList.push({
+      name: userData["name"],
+      age: userData["age"]
     });
   };
 };
